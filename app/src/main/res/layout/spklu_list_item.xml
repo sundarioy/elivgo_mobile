@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_spklu_list_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_ds_car"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_evstation" />
+
+    <TextView
+        android:id="@+id/tv_sc_spklu_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/asap"
+        android:text="SPKLU Universitas Pertamina"
+        android:textColor="#606060"
+        android:textStyle="bold"
+        app:flow_wrapMode="none"
+        app:layout_constraintEnd_toStartOf="@id/tv_sc_spklu_dist"
+        app:layout_constraintStart_toEndOf="@+id/iv_ds_car"
+        app:layout_constraintTop_toTopOf="@+id/iv_ds_car" />
+
+    <TextView
+        android:id="@+id/tv_sc_spklu_addr"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/asap"
+        android:maxLines="1"
+        android:text="Jl. Teuku Nyak Arief, Simprug"
+        android:textColor="#35424a"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_sc_spklu_dist"
+        app:layout_constraintStart_toStartOf="@+id/tv_sc_spklu_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sc_spklu_name" />
+
+    <TextView
+        android:id="@+id/tv_sc_spklu_dist"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="14dp"
+        android:fontFamily="@font/asap"
+        android:textColor="#35424a"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_sc_spklu_name" />
+
+    <TextView
+        android:id="@+id/tv_sc_conn_dc_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_corner_gray"
+        android:fontFamily="@font/asap"
+        android:paddingHorizontal="3dp"
+        android:paddingVertical="3dp"
+        android:text="DC"
+        android:textColor="#FFFFFF"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/tv_sc_conn_ac_val"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sc_spklu_addr" />
+
+    <TextView
+        android:id="@+id/tv_sc_conn_ac_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_corner_green"
+        android:fontFamily="@font/asap"
+        android:paddingHorizontal="3dp"
+        android:paddingVertical="3dp"
+        android:text="AC"
+        android:textColor="#FFFFFF"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_sc_spklu_addr"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sc_spklu_addr" />
+
+    <LinearLayout
+        android:id="@+id/ll_ds_detail_conn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_sc_conn_dc_val">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_item_conn_ac"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_item_conn_ac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_electrical_services_black_24dp" />
+
+            <TextView
+                android:id="@+id/tv_item_conn_ac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/asap"
+                android:text="AC "
+                android:textColor="#606060"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_item_conn_ac"
+                app:layout_constraintTop_toTopOf="@+id/iv_item_conn_ac" />
+
+            <TextView
+                android:id="@+id/tv_sc_conn_ac_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/asap"
+                android:text="Tersedia"
+                android:textColor="#4CAF50"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintStart_toEndOf="@+id/tv_item_conn_ac"
+                app:layout_constraintTop_toTopOf="@+id/iv_item_conn_ac" />
+
+            <ImageView
+                android:id="@+id/iv_sc_conn_ac_wait"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_item_conn_ac"
+                app:layout_constraintStart_toEndOf="@+id/tv_sc_conn_ac_status"
+                app:layout_constraintTop_toTopOf="@+id/tv_item_conn_ac"
+                app:srcCompat="@drawable/baseline_schedule_deep_orange_500_24dp" />
+
+            <TextView
+                android:id="@+id/tv_sc_conn_ac_wait"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/asap"
+                android:text="3 jam"
+                android:textColor="#FF5722"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_item_conn_ac"
+                app:layout_constraintStart_toEndOf="@+id/iv_sc_conn_ac_wait"
+                app:layout_constraintTop_toTopOf="@+id/tv_item_conn_ac" />
+
+            <ImageView
+                android:id="@+id/iv_sc_conn_ac_que"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_item_conn_ac"
+                app:layout_constraintStart_toEndOf="@+id/tv_sc_conn_ac_wait"
+                app:layout_constraintTop_toTopOf="@+id/tv_item_conn_ac"
+                app:srcCompat="@drawable/baseline_electric_car_red_800_24dp" />
+
+            <TextView
+                android:id="@+id/tv_sc_conn_ac_que"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/asap"
+                android:text="3 antrian"
+                android:textColor="#C62828"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_item_conn_ac"
+                app:layout_constraintStart_toEndOf="@+id/iv_sc_conn_ac_que"
+                app:layout_constraintTop_toTopOf="@+id/tv_item_conn_ac" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_item_conn_dc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_item_conn_dc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_electrical_services_black_24dp" />
+
+            <TextView
+                android:id="@+id/tv_item_conn_dc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/asap"
+                android:text="DC "
+                android:textColor="#606060"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_item_conn_dc"
+                app:layout_constraintStart_toEndOf="@+id/iv_item_conn_dc"
+                app:layout_constraintTop_toTopOf="@+id/iv_item_conn_dc" />
+
+            <TextView
+                android:id="@+id/tv_sc_conn_dc_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/asap"
+                android:text="Tersedia"
+                android:textColor="#4CAF50"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintStart_toEndOf="@+id/tv_item_conn_dc"
+                app:layout_constraintTop_toTopOf="@+id/tv_item_conn_dc" />
+
+            <ImageView
+                android:id="@+id/iv_sc_conn_dc_wait"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:visibility="invisible"
+                app:layout_constraintStart_toEndOf="@+id/tv_sc_conn_dc_status"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/baseline_schedule_deep_orange_500_24dp" />
+
+            <TextView
+                android:id="@+id/tv_sc_conn_dc_wait"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/asap"
+                android:text="3 jam"
+                android:textColor="#FF5722"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintStart_toEndOf="@+id/iv_sc_conn_dc_wait"
+                app:layout_constraintTop_toTopOf="@+id/tv_item_conn_dc" />
+
+            <ImageView
+                android:id="@+id/iv_sc_conn_dc_que"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:visibility="invisible"
+                app:layout_constraintStart_toEndOf="@+id/tv_sc_conn_dc_wait"
+                app:layout_constraintTop_toTopOf="@+id/iv_sc_conn_dc_wait"
+                app:srcCompat="@drawable/baseline_electric_car_red_800_24dp" />
+
+            <TextView
+                android:id="@+id/tv_sc_conn_dc_que"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/asap"
+                android:text="3 antrian"
+                android:textColor="#C62828"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:visibility="invisible"
+                app:layout_constraintStart_toEndOf="@+id/iv_sc_conn_dc_que"
+                app:layout_constraintTop_toTopOf="@+id/tv_item_conn_dc" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_item_todetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/asap"
+            android:text="Detail >>"
+            android:textColor="#2196F3"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl_item_conn_dc" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

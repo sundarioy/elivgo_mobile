@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_wrapBehaviorInParent="skipped"
+    tools:context=".SpkluDetailActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:id="@+id/iv_ch_car"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_evstation" />
+
+            <TextView
+                android:id="@+id/tv_ds_spklu_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/asap"
+                android:text="-"
+                android:textColor="#606060"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_ch_car"
+                app:layout_constraintTop_toTopOf="@+id/iv_ch_car"
+                app:layout_wrapBehaviorInParent="skipped" />
+
+            <TextView
+                android:id="@+id/tv_ds_spklu_addr"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/asap"
+                android:text="-"
+                android:textColor="#35424a"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_ch_car"
+                app:layout_constraintTop_toBottomOf="@+id/tv_ds_spklu_name" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_ds_conn_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/asap"
+                    android:text="Konektor"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_ds_conn_count_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/asap"
+                    android:text="-"
+                    android:textColor="#606060"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_ds_conn_count" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_ds_conn_dist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/asap"
+                    android:text="Jarak"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_ds_conn_dist_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/asap"
+                    android:text="-"
+                    android:textColor="#606060"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_ds_conn_dist" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_ds_conn_own"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/asap"
+                    android:text="Owner"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_ds_conn_own_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/asap"
+                    android:text="-"
+                    android:textColor="#606060"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_ds_conn_own" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/ds_top_line_break"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="#D6D6D6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_ds_detail_conn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_sc_spklu_addr">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_item_conn_ac"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_item_conn_ac"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_electrical_services_black_24dp" />
+
+                <TextView
+                    android:id="@+id/tv_item_conn_ac"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/asap"
+                    android:text="AC Konektor"
+                    android:textColor="#606060"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_item_conn_ac"
+                    app:layout_constraintStart_toEndOf="@+id/iv_item_conn_ac"
+                    app:layout_constraintTop_toTopOf="@+id/iv_item_conn_ac" />
+
+                <TextView
+                    android:id="@+id/tv_ds_conn_ac_status_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/asap"
+                    android:text="Status"
+                    android:textColor="#606060"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toStartOf="@+id/tv_item_conn_ac"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_item_conn_ac" />
+
+                <TextView
+                    android:id="@+id/tv_ds_conn_ac_status_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/asap"
+                    android:text="Tersedia"
+                    android:textColor="#4CAF50"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/tv_ds_conn_ac_status_lbl"
+                    app:layout_constraintTop_toTopOf="@+id/tv_ds_conn_ac_status_lbl" />
+
+                <TextView
+                    android:id="@+id/tv_ds_conn_ac_wait_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/asap"
+                    android:text="ETC"
+                    android:textColor="#606060"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_ds_conn_ac_wait"
+                    app:layout_constraintStart_toStartOf="@+id/tv_ds_conn_ac_status_lbl"
+                    app:layout_constraintTop_toTopOf="@+id/iv_ds_conn_ac_wait" />
+
+                <TextView
+                    android:id="@+id/tv_ds_conn_ac_que_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/asap"
+                    android:text="Antrian"
+                    android:textColor="#606060"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tv_ds_conn_ac_status_lbl"
+                    app:layout_constraintTop_toTopOf="@+id/iv_ds_conn_ac_que" />
+
+                <ImageView
+                    android:id="@+id/iv_ds_conn_ac_wait"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@+id/tv_ds_conn_ac_status_val"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_ds_conn_ac_status_val"
+                    app:srcCompat="@drawable/baseline_schedule_deep_orange_500_24dp" />
+
+                <TextView
+                    android:id="@+id/tv_ds_conn_ac_wait"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/asap"
+                    android:text="3 jam"
+                    android:textColor="#FF5722"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_ds_conn_ac_wait"
+                    app:layout_constraintStart_toEndOf="@+id/iv_ds_conn_ac_wait"
+                    app:layout_constraintTop_toTopOf="@+id/iv_ds_conn_ac_wait" />
+
+                <ImageView
+                    android:id="@+id/iv_ds_conn_ac_que"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@+id/tv_ds_conn_ac_status_val"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_ds_conn_ac_wait"
+                    app:srcCompat="@drawable/baseline_electric_car_red_800_24dp" />
+
+                <TextView
+                    android:id="@+id/tv_ds_conn_ac_que_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/asap"
+                    android:text="3 antrian"
+                    android:textColor="#C62828"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/tv_ds_conn_ac_wait"
+                    app:layout_constraintTop_toTopOf="@+id/iv_ds_conn_ac_que" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_item_conn_dc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_ds_conn_dc_status_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/asap"
+                    android:text="Status"
+                    android:textColor="#606060"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toStartOf="@+id/tv_item_conn_dc"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_item_conn_dc" />
+
+                <TextView
+                    android:id="@+id/tv_ds_conn_dc_wait_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/asap"
+                    android:text="ETC"
+                    android:textColor="#606060"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_ds_conn_dc_wait"
+                    app:layout_constraintStart_toStartOf="@+id/tv_item_conn_dc"
+                    app:layout_constraintTop_toTopOf="@+id/iv_ds_conn_dc_wait" />
+
+                <TextView
+                    android:id="@+id/tv_ds_conn_dc_que_lbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/asap"
+                    android:text="Antrian"
+                    android:textColor="#606060"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_ds_conn_dc_que"
+                    app:layout_constraintStart_toStartOf="@+id/tv_item_conn_dc"
+                    app:layout_constraintTop_toTopOf="@+id/iv_ds_conn_dc_que" />
+
+                <ImageView
+                    android:id="@+id/iv_item_conn_dc"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_electrical_services_black_24dp" />
+
+                <TextView
+                    android:id="@+id/tv_item_conn_dc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/asap"
+                    android:text="DC Konektor"
+                    android:textColor="#606060"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_item_conn_dc"
+                    app:layout_constraintStart_toEndOf="@+id/iv_item_conn_dc"
+                    app:layout_constraintTop_toTopOf="@+id/iv_item_conn_dc" />
+
+                <ImageView
+                    android:id="@+id/iv_ds_conn_dc_wait"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="50dp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@+id/tv_ds_conn_dc_status_val"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_item_conn_dc"
+                    app:srcCompat="@drawable/baseline_schedule_deep_orange_500_24dp" />
+
+                <TextView
+                    android:id="@+id/tv_ds_conn_dc_wait"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/asap"
+                    android:text="3 jam"
+                    android:textColor="#FF5722"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_ds_conn_dc_wait"
+                    app:layout_constraintStart_toEndOf="@+id/iv_ds_conn_dc_wait"
+                    app:layout_constraintTop_toTopOf="@+id/iv_ds_conn_dc_wait" />
+
+                <TextView
+                    android:id="@+id/tv_ds_conn_dc_status_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/asap"
+                    android:text="Dalam penggunaan"
+                    android:textColor="#686868"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/tv_ds_conn_dc_status_lbl"
+                    app:layout_constraintTop_toTopOf="@+id/tv_ds_conn_dc_status_lbl" />
+
+                <ImageView
+                    android:id="@+id/iv_ds_conn_dc_que"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@+id/iv_ds_conn_dc_wait"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_ds_conn_dc_wait"
+                    app:srcCompat="@drawable/baseline_electric_car_red_800_24dp" />
+
+                <TextView
+                    android:id="@+id/tv_ds_conn_dc_que_val"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/asap"
+                    android:text="3 antrian"
+                    android:textColor="#C62828"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/iv_ds_conn_dc_que"
+                    app:layout_constraintStart_toEndOf="@+id/iv_ds_conn_dc_que"
+                    app:layout_constraintTop_toTopOf="@+id/iv_ds_conn_dc_que" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_ds_cir_rsv"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/circle_red" />
+
+            <ImageView
+                android:id="@+id/iv_ds_ic_red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_ds_cir_rsv"
+                app:layout_constraintEnd_toEndOf="@+id/iv_ds_cir_rsv"
+                app:layout_constraintStart_toStartOf="@+id/iv_ds_cir_rsv"
+                app:layout_constraintTop_toTopOf="@+id/iv_ds_cir_rsv"
+                app:srcCompat="@drawable/baseline_calendar_today_white_24dp" />
+
+            <TextView
+                android:id="@+id/tv_ds_lbl_rsv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/asap"
+                android:text="Reservasi"
+                android:textColor="#606060"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="@id/iv_ds_cir_rsv"
+                app:layout_constraintStart_toStartOf="@id/iv_ds_cir_rsv"
+                app:layout_constraintTop_toBottomOf="@id/iv_ds_cir_rsv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_ds_cir_ch"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/circle_green" />
+
+            <ImageView
+                android:id="@+id/iv_ds_ic_charge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/iv_ds_cir_ch"
+                app:layout_constraintEnd_toEndOf="@id/iv_ds_cir_ch"
+                app:layout_constraintStart_toStartOf="@id/iv_ds_cir_ch"
+                app:layout_constraintTop_toTopOf="@id/iv_ds_cir_ch"
+                app:srcCompat="@drawable/baseline_power_24" />
+
+            <TextView
+                android:id="@+id/tv_ds_cir_charge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/asap"
+                android:text="Mulai Pengisian"
+                android:textColor="#606060"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="@id/iv_ds_cir_ch"
+                app:layout_constraintStart_toStartOf="@id/iv_ds_cir_ch"
+                app:layout_constraintTop_toBottomOf="@id/iv_ds_cir_ch" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_ds_cir_nav"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/circle_blue" />
+
+            <ImageView
+                android:id="@+id/iv_ds_ic_nav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/iv_ds_cir_nav"
+                app:layout_constraintEnd_toEndOf="@id/iv_ds_cir_nav"
+                app:layout_constraintStart_toStartOf="@id/iv_ds_cir_nav"
+                app:layout_constraintTop_toTopOf="@id/iv_ds_cir_nav"
+                app:srcCompat="@drawable/baseline_navigation_white_24dp" />
+
+            <TextView
+                android:id="@+id/tv_ds_cir_nav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/asap"
+                android:text="Navigasi"
+                android:textColor="#606060"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="@id/iv_ds_cir_nav"
+                app:layout_constraintStart_toStartOf="@id/iv_ds_cir_nav"
+                app:layout_constraintTop_toBottomOf="@id/iv_ds_cir_nav" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
